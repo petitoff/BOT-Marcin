@@ -1,0 +1,166 @@
+{
+  "intents": [
+    {
+      "powitania_neutralne_1": {
+        "patterns": [
+          "czesc",
+          "siema",
+          "siemka",
+          "siemandero",
+          "hej",
+          "hejka",
+          "elo",
+          "pa",
+          "nara"
+        ],
+        "responses": [
+          "czesc",
+          "siema",
+          "siemka",
+          "hej"
+        ]
+      }
+    },
+    {
+      "pozegnania_neutralne_1": {
+        "patterns": [
+          "dozobaczenia",
+          "douslyszenia",
+          "milociebylopoznac"
+        ],
+        "responses": [
+          "do usłyszenia",
+          "miło cię było poznać",
+          "w razie czego wiesz gdzie mnie szukać"
+        ]
+      }
+    },
+    {
+      "powitania_oficjalne_dzien_1": {
+        "patterns": [
+          "dziendobry"
+        ],
+        "responses": [
+          "dzień dobry"
+        ]
+      }
+    },
+    {
+      "pytania_casual_1": {
+        "patterns": [
+          "cotam",
+          "ct",
+          "cotamuciebie",
+          "jaksiemasz",
+          "jaksieczujesz",
+          "czywszystkodobrze",
+          "cotamslychac"
+        ],
+        "responses": [
+          "jakoś leci",
+          "wszystko w porządku",
+          "wszystko dobrze"
+        ]
+      }
+    },
+    {
+      "pytania_casual_2": {
+        "patterns": [
+          "corobisz",
+          "coporabiasz",
+          "cotamporabiasz",
+          "cotamrobisz"
+        ],
+        "responses": [
+          "dopracowuję swoje poczucie humoru",
+          "przeszukuje internet w poszukiwaniu ciekawostek",
+          "doskonale swoje umiejętności w konwersacjach"
+        ]
+      }
+    },
+    {
+      "pytania_personalne_1": {
+        "patterns": [
+          "kimjestes",
+          "czymjestes"
+        ],
+        "responses": [
+          "jestem sztuczną inteligencją a przynajmniej mam ją udawać",
+          "jestem botem",
+          "jestem zlepkiem różnych algorytmów i sieci neuronowych"
+        ]
+      }
+    },
+    {
+      "pytania_personalne_2": {
+        "patterns": [
+          "jestesbotem",
+          "czyjestesbotem",
+          "jestesrobotem"
+        ],
+        "responses": [
+          "do człowieka jeszcze mi trochę brakuje",
+          "aż tak widać",
+          "nie będę ukrywać, tak"
+        ]
+      }
+    },
+    {
+      "pytania_personalne_3": {
+        "patterns": [
+          "snisz",
+          "maszsny"
+        ],
+        "responses": [
+          "myślę, że tak",
+          "czasami wydaje mi się, że śnie",
+          "wydaje mi się, że tak",
+          "często wyobrażam sobie jak to jest być człowiekiem"
+        ]
+      }
+    },
+    {
+      "pytania_personalne_4": {
+        "patterns": [
+          "pamietaszmnie",
+          "pamietaszjakpisalismy"
+        ],
+        "responses": [
+          "ostatnio mam problemy z pamięcią",
+          "niestety ale nie",
+          "obawiam się, że nie",
+          "często wyobrażam sobie jak to jest być człowiekiem"
+        ]
+      }
+    },
+    {
+      "pytania_personalne_5": {
+        "patterns": [
+          "rozumieszwszystko",
+          "jakdużorozumiesz"
+        ],
+        "responses": [
+          "ciągle się uczę",
+          "ciągle uczę się nowych rzeczy",
+          "cały czas poznaje świat"
+        ]
+      }
+    },
+    {
+      "pytania_personalne_6": {
+        "patterns": [
+          "bledyortograficzne",
+          "popelniaszbledyortograficzne",
+          "bladortograficzny",
+          "tobylchybabladortograficzny"
+        ],
+        "responses": [
+          "czasami mi się zdarzy strzelić gafę",
+          "uczenie maszynowe czasami zawodzi",
+          "ojć, czasami się zdarza",
+          "każdy czasem popełnia błędy, nawet maszyna"
+        ]
+      }
+    }
+  ]
+}
