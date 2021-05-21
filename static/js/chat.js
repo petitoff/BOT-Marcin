@@ -1,14 +1,17 @@
-const form = document.querySelector(".typing-area"),
-    inputField = form.querySelector(".input-field"),
-    sendBtn = form.querySelector("button"),
-    chatBox = document.querySelector(".chat-box");
 
-inputField.focus();
-var userRawText = form.querySelector("textInput").val();
+function buttonClick() {
+    let userRawText = document.getElementById("inputMessage").value;
 
-function alertSend() {
-    alert(inputField);
+    let tag = document.createElement("P");
+    let text = document.createTextNode(userRawText);
+
+    tag.appendChild(text);
+
+    document.getElementById("inputMessage").value = "";
+
+    document.getElementById("userInput").appendChild(tag);
+
+    $("form").submit(function () { return false; });
+
 }
-function scrollToBottom() {
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
+
