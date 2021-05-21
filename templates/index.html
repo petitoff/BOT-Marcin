@@ -39,15 +39,15 @@
             </div>
         </div>
         <form action="#" class="typing-area" autocomplete="off">
-            <!-- <input type="text" class="incoming_id" name="incoming_id" hidden> -->
+            <input type="text" class="incoming_id" name="incoming_id" hidden>
 
-            <input type="text" class="input-field" placeholder="Wyślij wiadomość">
-            <button class="button"><i id="telegram" class="fab fa-telegram-plane"></i></button>
+            <input type="text" class="input-field" id="textInput" name="message" placeholder="Wyślij wiadomość">
+            <button class="button" onclick="alertSend()"><i id="telegram" class="fab fa-telegram-plane"></i></button>
         </form>
     </section>
 </div>
 
-
+<script src="../static/js/chat.js"></script>
 
 <body>
 
