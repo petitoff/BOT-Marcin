@@ -9,7 +9,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
+    <!-- flask implementation in HTML  -->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css' )}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='js/chat.js' )}}">
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../static/styles/style.css">
 
 </head>
@@ -34,12 +38,16 @@
                 </div>
             </div>
         </div>
-        <form action="#" class="typing-area">
-            <input type="text" placeholder="Wyślij wiadomość">
-            <button><i class="fab fa-telegram-plane"></i></button>
+        <form action="#" class="typing-area" autocomplete="off">
+            <!-- <input type="text" class="incoming_id" name="incoming_id" hidden> -->
+
+            <input type="text" class="input-field" placeholder="Wyślij wiadomość">
+            <button class="button"><i id="telegram" class="fab fa-telegram-plane"></i></button>
         </form>
     </section>
 </div>
+
+
 
 <body>
 
