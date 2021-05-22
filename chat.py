@@ -1,4 +1,4 @@
-class Chat():
+class Chat:
     def __init__(self):
         self.user_message = ""  # make global variable for user msg
         self.translate_msg = ""  # make global variable for translate user msg
@@ -7,7 +7,7 @@ class Chat():
         self.length_list = len(self.lst_unknown_word)
 
     def chat_analyze(self, msg):
-        self.user_message = msg  # msg to global variable
+        self.user_message = msg  # msg from user insert to global variable
         print(self.user_message)
 
         self.zamiana_polskich_liter()  # convert to text without polish letter
@@ -22,8 +22,8 @@ class Chat():
         z = {"!", "?", ".", ",", "<", ">", "/", ";", "(", ")",
              ":", '"'}
 
-        mytable = txt.maketrans(y)
-        self.translate_msg = txt.translate(mytable)
+        my_table = txt.maketrans(y)
+        self.translate_msg = txt.translate(my_table)
 
         self.translate_msg = self.translate_msg.translate(
             {ord(i): None for i in z})
