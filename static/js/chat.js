@@ -11,7 +11,7 @@ function buttonClick() {
 
     document.getElementById("userInput").appendChild(tag);
 
-    $("form").submit(function () { return false; });
+    // $("form").submit(function () { return false; });
 
 }
 
