@@ -57,23 +57,62 @@ class Chat:
             {ord(i): None for i in z})
 
         self.lst_unknown_word = []
-        self.lst_unknown_word = self.txt_translate_msg.split()
-        self.dlugosc_listy = len(self.lst_unknown_word)
-        self.len_word = len(self.txt_translate_msg)
+        self.lst_unknown_word = txt_translate_msg.split()
+        self.len_word = len(self.lst_unknown_word)
+        self.len_word = len(txt_translate_msg)
 
     def szukanie_zaawansowane(self):
-        # szukanie słowa od prawej strony
-        x = -1
+        # szukanie od prawa do lewa
+        n_1 = 1
+        while n_1 <= self.len_word:
+            n_2 = ""
+            n_2 = n_2.join(self.lst_unknown_word)
+            n_2 = n_2[0:self.len_word - n_1]
+            if n_2 == "":
+                break
+            wynik = search_intents(n_2)
+            n_1 += 1
+            if wynik is not None:
+                return wynik
+
+        # szukanie słowa od lewej do prawej
+        x = 1
         for i in range(0, self.len_word):
             n_2 = ""
             n_2 = n_2.join(self.lst_unknown_word)
-            n_2 = n_2[:x]
-            print("chat 1: " + n_2)
-            self.wynik = search_intents(n_2)
-            print("chat 2: " + str(self.wynik))
-            x -= 1
-            if self.wynik is not None:
-                return self.wynik
+            n_2 = n_2[x:]
+            if n_2 == "":
+                break
+            wynik = search_intents(n_2)
+            x += 1
+            if x > self.len_word:
+                break
+            if wynik is not None:
+                return wynik
+
+        # odcinanie lewa i prawa ku środku
+        odcinanie_od_lewa = 0
+        odcinanie_od_prawa = -1
+
+        while True:
+            lst_1 = ""
+            lst_1 = lst_1.join(self.lst_unknown_word)
+            lst_1 = lst_1[odcinanie_od_lewa:odcinanie_od_prawa]
+            if lst_1 == "":
+                break
+            else:
+                wynik = search_intents(lst_1)
+                if wynik is not None:
+                    return wynik
+            odcinanie_od_lewa += 1
+            lst_1 = lst_1.join(self.lst_unknown_word)
+            lst_1 = lst_1[odcinanie_od_lewa:odcinanie_od_prawa]
+            if lst_1 == "":
+                break
+            else:
+                wynik = search_intents(lst_1)
+                if wynik is not None:
+                    return wynik
 
 
 if __name__ == "__main__":
