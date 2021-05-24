@@ -17,8 +17,10 @@ def search_intents(
                     return word
 
 
-repeating_words = ["jeszczeraz", "jeszczejeden", "znaszjeszczejakis"]
+repeating_words = ["ajeszczejeden", "jeszczeraz", "jeszczejeden", "znaszjeszczejakis"]
 lst_input_context = []  # zapis wszystkich wiadomości od użytkownika
+
+
 # lst_msg_from_bot = []   # zapis wszystkich wiadomości od bota
 
 
@@ -41,14 +43,13 @@ def context_user_input_msg(user_msg=""):
 
         # sprawdzanie czy wpisana wiadomość znajduje się w słowniku repeating
         for i in repeating_words:
-            print(i)
             if i == current_word:
                 is_it_correct = True
                 break
             else:
                 is_it_correct = None
 
-        if is_it_correct is not None:   # jeżeli się znajduje wykonaj to
+        if is_it_correct is not None:  # jeżeli się znajduje wykonaj to
             n = 2
             while True:
                 last_word = lst_input_context[length_lst_input_context - n]
@@ -57,7 +58,7 @@ def context_user_input_msg(user_msg=""):
                     n += 1
                 else:
                     return send_msg
-        else:   # jeżeli się nie znajduje to zwróć False
+        else:  # jeżeli się nie znajduje to zwróć False
             return False
     else:
         return False
