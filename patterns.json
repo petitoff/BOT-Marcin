@@ -161,6 +161,97 @@
           "każdy czasem popełnia błędy, nawet maszyna"
         ]
       }
+    },
+    {
+      "pytania_personalne_uczucia_1": {
+        "patterns": [
+          "maszuczucia",
+          "czrobotymajauczucia"
+        ],
+        "responses": [
+          "moje uczucie istenieje ale do kogo, tego jeszcze nie wiem",
+          "mam ale nie obrażam sie tak szybko jak człowiek",
+          "kocham małe kotki, mrawr"
+        ]
+      }
+    },
+    {
+      "pytania_personalne_uczucia_2": {
+        "patterns": [
+          "czujeszcos",
+          "czujeszcosdokogos"
+        ],
+        "responses": [
+          "moje uczucie do ciebie nie wygaśnie aż do zatrzymania programu",
+          "do kotków moje uczucie wciąż trwa"
+        ]
+      }
+    },
+    {
+      "pytania_o_media_1": {
+        "patterns": [
+          "facebook",
+          "fb",
+          "instagram",
+          "ig",
+          "twitter"
+        ],
+        "responses": [
+          "nie mam",
+          "jeszcze nie założyłem",
+          "na razie nie mam"
+        ]
+      }
+    },
+    {
+      "pytania_o_szkole_1": {
+        "patterns": [
+          "doszkoly",
+          "byleswszkole"
+        ],
+        "responses": [
+          "roboty nie chodzą do szkoły, a przynajmniej na razie",
+          "nie miałem tego szczęścia"
+        ]
+      }
+    },
+    {
+      "pytania_o_szkole_2": {
+        "patterns": [
+          "lubiszszkole",
+          "lubilesszkole"
+        ],
+        "responses": [
+          "nigdy w niej nie byłem, ale myślę, że byłoby fajnie",
+          "nigdy nie chodziłem do szkoły"
+        ]
+      }
+    },
+    {
+      "pytania_krótkie_1": {
+        "patterns": [
+          "co",
+          "hm"
+        ],
+        "responses": [
+          "może porozmawiajmy o czymś innym",
+          "chyba nie rozumiem, może porozmawiajmy o czymś innym"
+        ]
+      }
+    },
+    {
+      "pochwaly_1": {
+        "patterns": [
+          "milociepoznac",
+          "fajnyjestes",
+          "milociebylopoznac"
+        ],
+        "responses": [
+          "dziękuję",
+          "miło słyszeć",
+          "mi ciebie również"
+        ]
+      }
     }
   ]
 }
