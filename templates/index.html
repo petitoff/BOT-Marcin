@@ -31,9 +31,9 @@
         </div>
         <!-- <form class="typing-area" autocomplete="off""> -->
         <div class="typing-area">
-            <input type=" text" class="inputMessage" id="inputMessage" name="inputMessage"
+            <input type="text" class="inputMessage" id="inputMessage" name="inputMessage"
                 placeholder="Wyślij wiadomość">
-            <button class="button" "><i id=" telegram" class="fab fa-telegram-plane"></i></button>
+            <button class="button"><i id=" telegram" class="fab fa-telegram-plane"></i></button>
         </div>
         <!-- </form> -->
     </section>
@@ -48,9 +48,15 @@
             $("#inputMessage").val("");
             $(".chat-box").append(userHtml);
 
+            var elements = document.getElementsByClassName('details');
+            elements[elements.length - 1].scrollIntoView();
+
             $.get("/get", { msg: rawText }).done(function (data) {
                 var botHtml = '<div class="chat incoming"><div class="details"><p>' + data + '</p></div></div>';
                 $(".chat-box").append(botHtml);
+
+                var elements = document.getElementsByClassName('details');
+                elements[elements.length - 1].scrollIntoView();
 
             });
 
@@ -64,6 +70,7 @@
     $(".button").click(function () {
         getBotResponse();
     })
+
 </script>
 
 <body>
