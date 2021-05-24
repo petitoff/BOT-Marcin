@@ -14,12 +14,17 @@ class Chat:
         print(self.user_message)
 
         self.zamiana_polskich_liter()  # convert to text without polish letter
-        self.zamiana_polskich_liter_2()  # konwertowanie do postaci bez spacji i znaków specjalnych
+        self.zamiana_polskich_liter_2()  # converting to characters without spaces or special characters
 
-        try_search = search_intents(self.translate_msg)  # najprostsze wyszukiwanie
-        if try_search is not None:
+        # tworzenie funkcji kontekstu
+        context_checking = context_user_input_msg(self.translate_msg)
+        if context_checking is not False:
+            return context_checking
+
+        try_search = search_intents(self.translate_msg)  # the simplest search
+        if try_search is not None:  # jeżeli coś znalazł wypisz to
             return try_search
-        else:
+        else:   # przeciwnym wypadku użyj wyszukiwania zaawansowanego
             final_search = self.szukanie_zaawansowane()
             if final_search is not None:
                 return final_search
@@ -33,7 +38,7 @@ class Chat:
         y = {"ą": "a", "ć": "c", "ę": "e", "ł": "l",
              "ń": "n", "ó": "o", "ś": "s", "ź": "z", "ż": "z"}
         z = {"!", "?", ".", ",", "<", ">", "/", ";", "(", ")",
-             ":", '"'}
+             ":", '"', ":"}
 
         my_table = txt.maketrans(y)
         self.translate_msg = txt.translate(my_table)
@@ -63,32 +68,32 @@ class Chat:
 
     def szukanie_zaawansowane(self):
         # szukanie od prawa do lewa
-        n_1 = 1
-        while n_1 <= self.len_word:
-            n_2 = ""
-            n_2 = n_2.join(self.lst_unknown_word)
-            n_2 = n_2[0:self.len_word - n_1]
-            if n_2 == "":
+        index_str_1 = 1
+        while index_str_1 <= self.len_word:
+            word_to_find = ""
+            word_to_find = word_to_find.join(self.lst_unknown_word)
+            word_to_find = word_to_find[0:self.len_word - index_str_1]
+            if word_to_find == "":
                 break
-            wynik = search_intents(n_2)
-            n_1 += 1
-            if wynik is not None:
-                return wynik
+            result = search_intents(word_to_find)
+            index_str_1 += 1
+            if result is not None:
+                return result
 
         # szukanie słowa od lewej do prawej
-        x = 1
+        index_str_2 = 1
         for i in range(0, self.len_word):
-            n_2 = ""
-            n_2 = n_2.join(self.lst_unknown_word)
-            n_2 = n_2[x:]
-            if n_2 == "":
+            word_to_find = ""
+            word_to_find = word_to_find.join(self.lst_unknown_word)
+            word_to_find = word_to_find[index_str_2:]
+            if word_to_find == "":
                 break
-            wynik = search_intents(n_2)
-            x += 1
-            if x > self.len_word:
+            result = search_intents(word_to_find)
+            index_str_2 += 1
+            if index_str_2 > self.len_word:
                 break
-            if wynik is not None:
-                return wynik
+            if result is not None:
+                return result
 
         # odcinanie lewa i prawa ku środku
         odcinanie_od_lewa = 0
@@ -101,18 +106,18 @@ class Chat:
             if lst_1 == "":
                 break
             else:
-                wynik = search_intents(lst_1)
-                if wynik is not None:
-                    return wynik
+                result = search_intents(lst_1)
+                if result is not None:
+                    return result
             odcinanie_od_lewa += 1
             lst_1 = lst_1.join(self.lst_unknown_word)
             lst_1 = lst_1[odcinanie_od_lewa:odcinanie_od_prawa]
             if lst_1 == "":
                 break
             else:
-                wynik = search_intents(lst_1)
-                if wynik is not None:
-                    return wynik
+                result = search_intents(lst_1)
+                if result is not None:
+                    return result
 
 
 if __name__ == "__main__":
