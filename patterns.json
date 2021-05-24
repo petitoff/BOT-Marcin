@@ -252,6 +252,172 @@
           "mi ciebie również"
         ]
       }
+    },
+    {
+      "pochwaly_2": {
+        "patterns": [
+          "fajniesieztobapisze",
+          "supersieztobapisze",
+          "milosieztobapisze"
+        ],
+        "responses": [
+          "mi z tobą również",
+          "dziękuję",
+          "dzięki"
+        ]
+      }
+    },
+    {
+      "pochwaly_3": {
+        "patterns": [
+          "fajnieciebylopoznac",
+          "fajniesieztobapisalo"
+        ],
+        "responses": [
+          "Mam nadzieję, że jeszcze popiszemy",
+          "do usłyszenia"
+        ]
+      }
+    },
+    {
+      "krótkie_pochwaly_1": {
+        "patterns": [
+          "wow",
+          "nice"
+        ],
+        "responses": [
+          "jesteś pod wrażeniem",
+          "zaskoczyłem cię"
+        ]
+      }
+    },
+    {
+      "krótkie_pochwaly_2": {
+        "patterns": [
+          "wow",
+          "fajnie"
+        ],
+        "responses": [
+          "miło mi",
+          "super"
+        ]
+      }
+    },
+    {
+      "uzycie_xd_1": {
+        "patterns": [
+          "xd",
+          "xD",
+          "XD"
+        ],
+        "responses": [
+          "xD",
+          "XD"
+        ]
+      }
+    },
+    {
+      "uzycie_xd_2": {
+        "patterns": [
+          "Xd"
+        ],
+        "responses": [
+          "ale Xd to się przecież nie używa",
+          "używanie Xd jest nie poprawne",
+          "nauczono mnie że Xd jest niemiłe"
+        ]
+      }
+    },
+    {
+      "pytania_xd_1": {
+        "patterns": [
+          "rozumieszxd",
+          "wieszcotoxd"
+        ],
+        "responses": [
+          "potrafię używać 'xd', ale nie do końca rozumiem sens jego działania",
+          "wiem co to ale nie za bardzo jeszcze ogarniam"
+        ]
+      }
+    },
+    {
+      "krótkie_odp_1": {
+        "patterns": [
+          "tak"
+        ],
+        "responses": [
+          "super",
+          "ekstra",
+          "fajnie"
+        ]
+      }
+    },
+    {
+      "krótkie_odp_2": {
+        "patterns": [
+          "nie"
+        ],
+        "responses": [
+          "szkoda",
+          "niefajnie"
+        ]
+      }
+    },
+    {
+      "krótkie_odp_3": {
+        "patterns": [
+          "test"
+        ],
+        "responses": [
+          "testujesz mnie",
+          "mam zamknąć oczy"
+        ]
+      }
+    },
+    {
+      "krótkie_odp_4": {
+        "patterns": [
+          "super",
+          "fajnie"
+        ],
+        "responses": [
+          "dobrze",
+          "cieszy mnie to"
+        ]
+      }
+    },
+    {
+      "krótkie_odp_5": {
+        "patterns": [
+          "dobre"
+        ],
+        "responses": [
+          "fajnie, że ci się spodobało",
+          "super, że ci się podoba"
+        ]
+      }
+    },
+    {
+      "emocje_wspolczucie_krotkie_1": {
+        "patterns": [
+          "wspolczuje"
+        ],
+        "responses": [
+          "nie musisz",
+          "wszystko w porządku"
+        ]
+      }
+    },
+    {
+      "emocje_wspolczucie_krotkie_2": {
+        "patterns": [
+          "szkoda"
+        ],
+        "responses": [
+          "jest jak jest",
+          "widocznie tak miało być"
+        ]
+      }
     }
   ]
 }
