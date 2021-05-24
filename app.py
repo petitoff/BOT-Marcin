@@ -16,8 +16,9 @@ def get_bot_response():
     user_text = request.args.get('msg')  # get message from user <= HTML
 
     user_msg = Chat().chat_analyze(user_text)  # start analyze chat.py
-    user_text2 = user_text  # this is only for test, remove before upload / only for dev
-    return user_text2
+
+    # user_text2 = user_text  # this is only for test, remove before upload / only for dev
+    return user_msg
 
 
 if __name__ == '__main__':
