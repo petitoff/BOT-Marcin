@@ -1,6 +1,11 @@
 from brain import *
 
 
+def upper_word(msg):
+    msg = msg[0].upper() + msg[1:]
+    return msg
+
+
 class Chat:
     def __init__(self):
         self.user_message = ""  # make global variable for user msg
@@ -19,15 +24,15 @@ class Chat:
         # tworzenie funkcji kontekstu
         context_checking = context_user_input_msg(self.translate_msg)
         if context_checking is not False:
-            return context_checking
+            return upper_word(context_checking)
 
         try_search = search_intents(self.translate_msg)  # the simplest search
         if try_search is not None:  # jeżeli coś znalazł wypisz to
-            return try_search
+            return upper_word(try_search)
         else:   # przeciwnym wypadku użyj wyszukiwania zaawansowanego
             final_search = self.szukanie_zaawansowane()
             if final_search is not None:
-                return final_search
+                return upper_word(final_search)
             else:
                 return "Nie rozumiem"
 
