@@ -14,7 +14,7 @@
           "nara"
         ],
         "responses": [
-          "czesc",
+          "cześć",
           "siema",
           "siemka",
           "hej"
@@ -242,14 +242,11 @@
     {
       "pochwaly_1": {
         "patterns": [
-          "milociepoznac",
-          "fajnyjestes",
-          "milociebylopoznac"
+          "fajnyjestes"
         ],
         "responses": [
           "dziękuję",
-          "miło słyszeć",
-          "mi ciebie również"
+          "miło słyszeć"
         ]
       }
     },
@@ -275,6 +272,17 @@
         ],
         "responses": [
           "Mam nadzieję, że jeszcze popiszemy",
+          "do usłyszenia"
+        ]
+      }
+    },    {
+      "pochwaly_4": {
+        "patterns": [
+          "milociepoznac",
+          "milociebylopoznac"
+        ],
+        "responses": [
+          "mi ciebie również",
           "do usłyszenia"
         ]
       }
