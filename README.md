@@ -5,3 +5,5 @@ Był to projekt oparty o sztuczną inteligencje. Zakładał przygotowanie bota ,
 Finalnie został stworzony program, który rozumie i potrafi używać języka polskiego w zaprogramowany wcześniej sposób.
 
 Jest to bardzo prosty program i mało funkcjonalny. Został stworzony przede wszystkim aby rozwijać swoją pasję oraz umiejętności.
+
+Program można przetestować samemu na stronie: http://bot-marcin.herokuapp.com/
